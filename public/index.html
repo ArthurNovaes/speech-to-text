@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Speech to text</title>
+		
+		<script src="./js/voiceToText.js"></script>
+		<link rel="stylesheet" href="./css/font-awesome-4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="./css/style.css">
+	</head>
+	<body>
+
+		<p id="ola">Você falou:</p>
+		<div id="transcription">
+			<div id="results">
+			  <span id="final_span" class="final"></span>
+			  <span id="interim_span" class="interim"></span>
+			</div>
+		</div>
+
+		<div class="container">
+			<button id="start_button">
+				<a href="#" id="start_button" onclick="startDictation(event)">
+					<i class="fa fa-microphone"></i>
+				</a>
+			</button>
+
+			<button id="start_button">
+				<a href="#" id="start_button" onclick="startDictation(event)">
+					<i class="fa fa-stop-circle"></i>
+				</a>
+			</button>
+		</div>
+
+		<p id="status">status: <span>aguardando permissão</span></p>
+	    <span id="ws-unsupported" class="hidden">API not supported</span>
+	</body>
+</html>
