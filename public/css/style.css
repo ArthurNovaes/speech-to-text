@@ -21,7 +21,22 @@
 		    justify-content: space-around;
 		    padding: 0 330px;
 		}
+		
+		#results {
+			display: flex;
+			flex-direction: column;
+		}
 
+		textarea {
+			border-top: none;
+			border-left: none;
+			border-right: none;
+			border-bottom: 1px solid #AAA;
+			outline: none;
+    		padding-top: 1em;
+    		resize: none;
+
+		}
 
 		#transcription {
 			width: 50%;

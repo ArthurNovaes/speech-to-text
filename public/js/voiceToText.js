@@ -57,3 +57,12 @@ function startDictation(event) {
   final_span.innerHTML = '';
   interim_span.innerHTML = '';
 }
+
+var text = null;
+
+function startSpeech(event) {
+  if (event) {
+    text = event.target.value
+  }
+  return text
+}

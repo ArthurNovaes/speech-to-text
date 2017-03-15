@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Speech to text</title>
+		<title>Speech to text and text to Speak</title>
 		
+		<script src='https://code.responsivevoice.org/responsivevoice.js'></script>
 		<script src="./js/voiceToText.js"></script>
 		<link rel="stylesheet" href="./css/font-awesome-4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="./css/style.css">
@@ -12,8 +13,9 @@
 		<p id="ola">Você falou:</p>
 		<div id="transcription">
 			<div id="results">
+		      <textarea id="interim_span" placeholder="Digite seu texto..." onchange="startSpeech(event)" class="final"> </textarea>
 			  <span id="final_span" class="final"></span>
-			  <span id="interim_span" class="interim"></span>
+			  <!-- <span id="interim_span" class="interim"></span> -->
 			</div>
 		</div>
 
@@ -30,6 +32,12 @@
 				</a>
 			</button>
 		</div>
+
+		<button id="start_button">
+			<a href="#" id="start_button" onclick='responsiveVoice.speak(startSpeech(), "Brazilian Portuguese Female");'>
+				<i class="fa fa-play"></i>
+			</a>
+		</button>
 
 		<p id="status">status: <span>aguardando permissão</span></p>
 	    <span id="ws-unsupported" class="hidden">API not supported</span>
